@@ -21,7 +21,7 @@ router.post("/", function(req, res, next){
             throw new ExpressError("New item cannot share a name with a current one", 400);
         }
         items.push(newItem)
-        return res.json({"added":newItem});
+        return res.status(201).json({"added":newItem});
     } catch (error) {
         return next(error);
     }
