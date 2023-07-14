@@ -51,7 +51,7 @@ router.patch("/:name", function(req, res, next){
         }
         item.name = update.name
         item.price = update.price
-        return res.json({"Updated":item});
+        return res.json({"updated":item});
     } catch (error) {
         return next(error);
     }
